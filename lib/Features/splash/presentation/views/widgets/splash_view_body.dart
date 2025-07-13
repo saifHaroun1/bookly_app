@@ -9,7 +9,11 @@ class SplashViewBody extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [Image.asset(AssetsData.logo_bookly)],
+      children: [
+        Image.asset(AssetsData.logo_bookly),
+        SizedBox(height: 10),
+        Text("reed free books", style: TextStyle(fontSize: 20)),
+      ],
     );
   }
 }
