@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -22,8 +22,9 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 45.h),
           Padding(
             padding: const EdgeInsets.only(left: 10),
-            child: Text("Best Sellers", style: Styles.titleMedium),
+            child: Text("Best Sellers", style: Styles.textStyle18),
           ),
+          SizedBox(height: 10.h),
           BestSellerListViewItem(),
         ],
       ),
@@ -36,20 +37,29 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 120.h,
-          width: 90.w,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(
-              image: AssetImage(AssetsData.ala_5ota_elrasoul),
-              fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: Row(
+        children: [
+          Container(
+            height: 120.h,
+            width: 90.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage(AssetsData.ala_5ota_elrasoul),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-      ],
+          SizedBox(width: 30.w),
+          Column(
+            children: [
+              Text("عَلَى خُطَى الرَّسُولِ ﷺ", style: Styles.playfairDisplay),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
