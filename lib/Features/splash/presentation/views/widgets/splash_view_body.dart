@@ -59,7 +59,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
         transition: Transition.fadeIn,
         duration: KtransationDuration,
       );
-      ;
     });
   }
 
