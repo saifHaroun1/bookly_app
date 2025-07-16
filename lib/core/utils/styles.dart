@@ -16,11 +16,14 @@ abstract class Styles {
   static const textStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: Colors.black54,
   );
 
   static final playfairDisplay = GoogleFonts.playfairDisplay(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
+  );
+  static final playfairDisplay30 = GoogleFonts.playfairDisplay(
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w900,
   );
 }

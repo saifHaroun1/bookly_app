@@ -1,6 +1,8 @@
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_item.dart';
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -16,6 +18,22 @@ class BookDetailsViewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * .18),
             child: CustomBookImage(),
+          ),
+          SizedBox(height: 43.h),
+          Text(
+            "عَلَى خُطَى الرَّسُولِ ﷺ",
+            style: Styles.playfairDisplay30.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 5.h),
+          Text(
+            "ادهم شرقاوي",
+            style: Styles.playfairDisplay.copyWith(
+              color: Color(0xFF707070),
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ],
       ),

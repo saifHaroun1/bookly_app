@@ -41,7 +41,10 @@ class BestSellerListViewItem extends StatelessWidget {
                     style: Styles.playfairDisplay,
                   ),
                   SizedBox(height: 3.h),
-                  Text("ادهم شرقاوي", style: Styles.textStyle14),
+                  Opacity(
+                    opacity: 0.7,
+                    child: Text("ادهم شرقاوي", style: Styles.textStyle14),
+                  ),
 
                   SizedBox(height: 3.h),
                   Row(
