@@ -14,50 +14,60 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        children: [
-          SafeArea(child: CustomBookDetailsAppBar()),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .18),
-            child: CustomBookImage(),
-          ),
-          SizedBox(height: 18.h),
-          Text(
-            "عَلَى خُطَى الرَّسُولِ ﷺ",
-            style: Styles.playfairDisplay30.copyWith(
-              fontWeight: FontWeight.bold,
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                SafeArea(child: CustomBookDetailsAppBar()),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * .18),
+                  child: CustomBookImage(),
+                ),
+                SizedBox(height: 18.h),
+                Text(
+                  "عَلَى خُطَى الرَّسُولِ ﷺ",
+                  style: Styles.playfairDisplay30.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 2.h),
+                Opacity(
+                  opacity: 1,
+                  child: Text(
+                    "ادهم شرقاوي",
+                    style: Styles.playfairDisplay.copyWith(
+                      color: Color(0xFF707070),
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                BookRating(),
+                SizedBox(height: 23.h),
+                BooksAction(),
+                Expanded(child: SizedBox(height: 30.h)),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "You can also like",
+                    style: Styles.textStyle16.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10.h),
+                SimilarBooksListView(),
+                SizedBox(height: 40.h),
+              ],
             ),
           ),
-          SizedBox(height: 2.h),
-          Opacity(
-            opacity: 1,
-            child: Text(
-              "ادهم شرقاوي",
-              style: Styles.playfairDisplay.copyWith(
-                color: Color(0xFF707070),
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-          SizedBox(height: 8.h),
-          BookRating(),
-          SizedBox(height: 23.h),
-          BooksAction(),
-          SizedBox(height: 25.h),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "You can also like",
-              style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600),
-            ),
-          ),
-          SizedBox(height: 10.h),
-          SimilarBooksListView(),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
