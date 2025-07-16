@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -19,7 +20,7 @@ class BookDetailsViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: width * .18),
             child: CustomBookImage(),
           ),
-          SizedBox(height: 43.h),
+          SizedBox(height: 23.h),
           Text(
             "عَلَى خُطَى الرَّسُولِ ﷺ",
             style: Styles.playfairDisplay30.copyWith(
@@ -27,14 +28,19 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5.h),
-          Text(
-            "ادهم شرقاوي",
-            style: Styles.playfairDisplay.copyWith(
-              color: Color(0xFF707070),
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w500,
+          Opacity(
+            opacity: 1,
+            child: Text(
+              "ادهم شرقاوي",
+              style: Styles.playfairDisplay.copyWith(
+                color: Color(0xFF707070),
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
+          SizedBox(height: 10.h),
+          BookRating(),
         ],
       ),
     );
