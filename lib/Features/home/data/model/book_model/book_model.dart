@@ -44,7 +44,6 @@ class BookModel extends Equatable {
         ? null
         : SearchInfo.fromJson(json['searchInfo'] as Map<String, dynamic>),
   );
-
   Map<String, dynamic> toJson() => {
     'kind': kind,
     'id': id,
